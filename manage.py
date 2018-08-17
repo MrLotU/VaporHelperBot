@@ -24,11 +24,7 @@ class BotSupervisor(object):
     def start(self):
         env = copy.deepcopy(os.environ)
         env.update(self.env)
-        if env['ENV'] == 'docker':
-            self.proc = subprocess.Popen(['python', '-m', 'disco.cli', '--token', os.getenv('VAPORHELPER_DISCORD_BOT_TOKEN'), '--config', 'config.yaml'], env=env)
-            
-            return
-        self.proc = subprocess.Popen(['python', '-m', 'disco.cli', '--config', 'config.yaml'], env=env)
+        self.proc = subprocess.Popen(['python', '-m', 'disco.cli', '--token', os.getenv('VAPORHELPER_DISCORD_BOT_TOKEN'), '--config', 'config.yaml'], env=env)
 
     def stop(self):
         self.proc.terminate()

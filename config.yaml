@@ -1,0 +1,13 @@
+token: 'Token here!'
+
+bot:
+  commands_require_mention: false
+  commands_prefix: '..'
+  levels:
+    431920836631592980: 50
+    431919254372089857: 100
+    431920712505098240: 30
+    188918216008007680: 500
+  plugins:
+    - 'VaporHelper.plugins.autoReply'
+    - 'VaporHelper.plugins.core'

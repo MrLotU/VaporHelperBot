@@ -1,0 +1,6 @@
+disco-py==0.0.12
+psycogreen==1.0
+click==6.7
+PyYAML==3.12
+peewee==3.6.4
+psycopg2==2.7.5

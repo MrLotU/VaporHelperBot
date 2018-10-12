@@ -83,7 +83,7 @@ class AutoReplyPlugin(Plugin):
         event.msg.reply('Created reply `{}` for `{}`'.format(reply, word))
     
     @Plugin.command('delete', '<word:str>', group='reply', level=CommandLevels.MOD)
-    def remove_reply(self, event, word, reply):
+    def remove_reply(self, event, word):
         try:
             gReply = AutoReply.select().where(AutoReply.word==word).get()
         except AutoReply.DoesNotExist:
